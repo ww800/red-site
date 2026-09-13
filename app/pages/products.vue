@@ -4,9 +4,6 @@ const isMenuOpen = ref(false)
 const navigation = [
   { label: '首页', href: '/' },
   { label: '产品', href: '/products' },
-  { label: '关于', href: '/about' },
-  { label: '团队', href: '/team' },
-  { label: '联系', href: '/contact' },
 ]
 
 const products = [
@@ -100,7 +97,7 @@ const closeMenu = () => {
     <!-- 产品卡片网格 -->
     <main class="mx-auto max-w-7xl px-6 py-12 lg:px-10">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink v-for="product in filteredProducts" :key="product.id" :to="`/products/${product.id}`"
+        <NuxtLink v-for="product in filteredProducts" :key="product.id" to="/products"
           class="group rounded-xl bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
           <!-- 图片区域 -->
           <div class="mb-4 h-48 rounded-lg flex items-center justify-center text-5xl font-serif font-bold"
